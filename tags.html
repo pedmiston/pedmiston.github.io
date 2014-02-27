@@ -1,66 +1,233 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
 <head>
-        <meta charset="utf-8" />
-        <title>pedmiston.org - Tags</title>
-        <link rel="stylesheet" href="http://pedmiston.org/theme/css/main.css" />
-        <link href="http://pedmiston.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="pedmiston.org Atom Feed" />
+    <title>Tags - pedmiston.org</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
 
-        <!--[if IE]>
-            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
+    <!-- Open Graph tags -->
+        <meta property="og:site_name" content="pedmiston.org" />
+            <meta property="og:type" content="website"/>
+            <meta property="og:title" content="pedmiston.org"/>
+            <meta property="og:url" content="http://pedmiston.org"/>
+            <meta property="og:description" content="pedmiston.org"/>
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="http://pedmiston.org/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="http://pedmiston.org/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="http://pedmiston.org/theme/css/pygments/native.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://pedmiston.org/theme/css/style.css" type="text/css"/>
+
+        <link href="http://pedmiston.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="pedmiston.org ATOM Feed"/>
+
 </head>
+<body>
 
-<body id="index" class="home">
-<a href="http://github.com/pedmiston">
-<img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" />
-</a>
-        <header id="banner" class="body">
-                <h1><a href="http://pedmiston.org/">pedmiston.org </a></h1>
-                <nav><ul>
-                    <li><a href="http://pedmiston.org/pages/about.html">about</a></li>
-                    <li><a href="http://pedmiston.org/pages/talks.html">talks</a></li>
-                    <li><a href="http://pedmiston.org/pages/tools.html">tools</a></li>
-                    <li><a href="http://pedmiston.org/category/commentary.html">commentary</a></li>
-                    <li><a href="http://pedmiston.org/category/quotes.html">quotes</a></li>
-                </ul></nav>
-        </header><!-- /#banner -->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="http://pedmiston.org/" class="navbar-brand">
+pedmiston.org            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                         <li><a href="http://pedmiston.org/pages/about.html">
+                             about
+                          </a></li>
+                         <li><a href="http://pedmiston.org/pages/talks.html">
+                             talks
+                          </a></li>
+                         <li><a href="http://pedmiston.org/pages/tools.html">
+                             tools
+                          </a></li>
+                        <li >
+                            <a href="http://pedmiston.org/category/commentary.html">Commentary</a>
+                        </li>
+                        <li >
+                            <a href="http://pedmiston.org/category/quotes.html">Quotes</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="http://pedmiston.org/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
 
-<section id="content" class="body">
-    <h1>Tags for pedmiston.org</h1>        <li><a href="http://pedmiston.org/tag/edge.html">edge</a> (1)</li>
-        <li><a href="http://pedmiston.org/tag/evolution.html">evolution</a> (1)</li>
-        <li><a href="http://pedmiston.org/tag/ideas.html">ideas</a> (1)</li>
-        <li><a href="http://pedmiston.org/tag/openscience.html">openscience</a> (1)</li>
-        <li><a href="http://pedmiston.org/tag/preregristration.html">preregristration</a> (1)</li>
-</section>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
 
-        <section id="extras" class="body">
-                <div class="blogroll">
-                        <h2>blogroll</h2>
-                        <ul>
-                            <li><a href="http://pedmiston.org/experiment-resources/">experiment-resources</a></li>
-                            <li><a href="http://pedmiston.org/turkgatemanager/">turkgatemanager</a></li>
-                        </ul>
-                </div><!-- /.blogroll -->
-                <div class="social">
-                        <h2>social</h2>
-                        <ul>
-                            <li><a href="http://pedmiston.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+    <section id="tags">
+        <h1>Tags for pedmiston.org</h1>
+        <div class="panel-group" id="accordion">            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse-edge">edge <span class="badge pull-right">1</span></a>
+                    </h4>
+                </div>
+                <div id="collapse-edge" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <p><span class="categories-timestamp"><time datetime="2014-02-24T00:00:00">Mon 24 February 2014</time></span> <a href="http://pedmiston.org/blurring-the-line.html">Blurring the line</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse-evolution">evolution <span class="badge pull-right">1</span></a>
+                    </h4>
+                </div>
+                <div id="collapse-evolution" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <p><span class="categories-timestamp"><time datetime="2014-02-23T00:00:00">Sun 23 February 2014</time></span> <a href="http://pedmiston.org/quote-ideas.html">Ideas</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse-ideas">ideas <span class="badge pull-right">1</span></a>
+                    </h4>
+                </div>
+                <div id="collapse-ideas" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <p><span class="categories-timestamp"><time datetime="2014-02-23T00:00:00">Sun 23 February 2014</time></span> <a href="http://pedmiston.org/quote-ideas.html">Ideas</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse-openscience">openscience <span class="badge pull-right">1</span></a>
+                    </h4>
+                </div>
+                <div id="collapse-openscience" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <p><span class="categories-timestamp"><time datetime="2014-02-24T00:00:00">Mon 24 February 2014</time></span> <a href="http://pedmiston.org/blurring-the-line.html">Blurring the line</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse-preregristration">preregristration <span class="badge pull-right">1</span></a>
+                    </h4>
+                </div>
+                <div id="collapse-preregristration" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <p><span class="categories-timestamp"><time datetime="2014-02-24T00:00:00">Mon 24 February 2014</time></span> <a href="http://pedmiston.org/blurring-the-line.html">Blurring the line</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-                            <li><a href="https://github.com/pedmiston">github</a></li>
-                            <li><a href="http://osf.io/dsu3k">openscienceframework</a></li>
-                            <li><a href="http://sapir.psych.wisc.edu">lupyanlab</a></li>
-                        </ul>
-                </div><!-- /.social -->
-        </section><!-- /#extras -->
+    </section>
+        </div>
+        <div class="col-sm-3 well well-sm" id="sidebar">
 
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
+<aside>
+    <section>
+        <ul class="list-group list-group-flush">
+                <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+                  <ul class="list-group" id="social">
+                    <li class="list-group-item"><a href="https://github.com/pedmiston"><i
+                            class="fa fa-github-square fa-lg"></i> github
+                    </a></li>
+                    <li class="list-group-item"><a href="http://osf.io/dsu3k"><i
+                            class="fa fa-openscienceframework-square fa-lg"></i> openscienceframework
+                    </a></li>
+                    <li class="list-group-item"><a href="http://sapir.psych.wisc.edu"><i
+                            class="fa fa-lupyanlab-square fa-lg"></i> lupyanlab
+                    </a></li>
+                  </ul>
+                </li>
 
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
-        </footer><!-- /#contentinfo -->
+
+
+                <li class="list-group-item"><a href="http://pedmiston.org/"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
+                    <ul class="list-group " id="tags">
+                        <li class="list-group-item tag-4">
+                            <a href="http://pedmiston.org/tag/openscience.html">
+                                openscience
+                            </a>
+                        </li>
+                        <li class="list-group-item tag-4">
+                            <a href="http://pedmiston.org/tag/evolution.html">
+                                evolution
+                            </a>
+                        </li>
+                        <li class="list-group-item tag-4">
+                            <a href="http://pedmiston.org/tag/edge.html">
+                                edge
+                            </a>
+                        </li>
+                        <li class="list-group-item tag-4">
+                            <a href="http://pedmiston.org/tag/preregristration.html">
+                                preregristration
+                            </a>
+                        </li>
+                        <li class="list-group-item tag-4">
+                            <a href="http://pedmiston.org/tag/ideas.html">
+                                ideas
+                            </a>
+                        </li>
+                    </ul>
+                </li>    
+    <li class="list-group-item"><h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
+      <ul class="list-group" id="links">
+        <li class="list-group-item">
+            <a href="http://pedmiston.org/experiment-resources/" target="_blank">
+                experiment-resources
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="http://pedmiston.org/turkgatemanager/" target="_blank">
+                turkgatemanager
+            </a>
+        </li>
+      </ul>
+    </li>
+
+        </ul>
+    </section>
+
+</aside>        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2014 Pierce Edmiston
+            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="http://code.jquery.com/jquery.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://pedmiston.org/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="http://pedmiston.org/theme/js/respond.min.js"></script>
 
 </body>
 </html>
