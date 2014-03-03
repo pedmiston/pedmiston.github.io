@@ -1,130 +1,189 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:og="http://ogp.me/ns#"
-      xmlns:fb="https://www.facebook.com/2008/fbml">
-<head>
-    <title>Uncapitalize - pedmiston.org</title>
-    <!-- Using the latest rendering mode for IE -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-
-    <!-- Open Graph tags -->
-        <meta property="og:site_name" content="pedmiston.org" />
-            <meta property="og:type" content="article"/>
-            <meta property="og:title" content="Uncapitalize"/>
-            <meta property="og:url" content="http://pedmiston.org/uncapitalize.html"/>
-            <meta property="og:description" content="Simple script using BeautifulSoup to tweak various aspects of this website's pelican output."/>
-            <meta property="article:published_time" content="2014-02-23" />
-            <meta property="article:section" content="unsolicited" />
-            <meta property="article:tag" content="python" />
-            <meta property="article:tag" content="self-reference" />
-
-    <!-- Bootstrap -->
-        <link rel="stylesheet" href="http://pedmiston.org/theme/css/bootstrap.min.css" type="text/css"/>
-    <link href="http://pedmiston.org/theme/css/font-awesome.min.css" rel="stylesheet">
-
-    <link href="http://pedmiston.org/theme/css/pygments/native.css" rel="stylesheet">
-    <link rel="stylesheet" href="http://pedmiston.org/theme/css/style.css" type="text/css"/>
-
-        <link href="http://pedmiston.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
-              title="pedmiston.org ATOM Feed"/>
-
-</head>
-<body>
-
-<div class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a href="http://pedmiston.org/" class="navbar-brand">
-pedmiston.org            </a>
-        </div>
-        <div class="collapse navbar-collapse navbar-ex1-collapse">
-            <ul class="nav navbar-nav">
-                         <li><a href="http://pedmiston.org/pages/about.html">
-                             about
-                          </a></li>
-                         <li><a href="http://pedmiston.org/pages/talks.html">
-                             talks
-                          </a></li>
-                         <li><a href="http://pedmiston.org/pages/tools.html">
-                             tools
-                          </a></li>
-                        <li class="active">
-                            <a href="http://pedmiston.org/category/unsolicited.html">Unsolicited</a>
-                        </li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="http://pedmiston.org/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="https://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#">
+ <head>
+  <title>
+   Uncapitalize - pedmiston.org
+  </title>
+  <!-- Using the latest rendering mode for IE -->
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <!-- Open Graph tags -->
+  <meta content="pedmiston.org" property="og:site_name"/>
+  <meta content="article" property="og:type"/>
+  <meta content="Uncapitalize" property="og:title"/>
+  <meta content="../uncapitalize.html" property="og:url"/>
+  <meta content="Simple script using BeautifulSoup to tweak various aspects of this website's pelican output." property="og:description"/>
+  <meta content="2014-02-23" property="article:published_time"/>
+  <meta content="unsolicited" property="article:section"/>
+  <meta content="python" property="article:tag"/>
+  <meta content="self-reference" property="article:tag"/>
+  <!-- Bootstrap -->
+  <link href="../theme/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <link href="../theme/css/font-awesome.min.css" rel="stylesheet"/>
+  <link href="../theme/css/pygments/native.css" rel="stylesheet"/>
+  <link href="../theme/css/style.css" rel="stylesheet" type="text/css"/>
+ </head>
+ <body>
+  <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+   <div class="container">
+    <div class="navbar-header">
+     <button class="navbar-toggle" data-target=".navbar-ex1-collapse" data-toggle="collapse" type="button">
+      <span class="sr-only">
+       Toggle navigation
+      </span>
+      <span class="icon-bar">
+      </span>
+      <span class="icon-bar">
+      </span>
+      <span class="icon-bar">
+      </span>
+     </button>
+     <a class="navbar-brand" href="../">
+      pedmiston.org
+     </a>
     </div>
-</div> <!-- /.navbar -->
-
-<div class="container">
-    <div class="row">
-        <div class="col-sm-9">
-
-    <section id="content">
-        <article>
-            <header class="page-header">
-                <h1>
-                    <a href="http://pedmiston.org/uncapitalize.html"
-                       rel="bookmark"
-                       title="Permalink to Uncapitalize">
-                        Uncapitalize
-                    </a>
-                </h1>
-            </header>
-            <div class="entry-content">
-                <div class="panel">
-                    <div class="panel-body">
-<footer class="post-info">
-    <span class="label label-default">Date</span>
-    <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2014-02-23T00:00:00"> Sun 23 February 2014</time>
-    </span>
-
-
-
-<span class="label label-default">Tags</span>
-	<a href="http://pedmiston.org/tag/python.html">python</a>
-        /
-	<a href="http://pedmiston.org/tag/self-reference.html">self-reference</a>
-    
-</footer><!-- /.post-info -->                    </div>
-                </div>
-                <p>I forced myself to learn a little bit about BeautifulSoup tonight. My goal was to change a small aspect of this website: the fact that I could specify the capitalization of pages in the title ("About" versus "about"), but I could not specify the capitalization of the category---in particular, "Unsolicited" turned to "unsolicited". I take the amount of time spent on this trivial aspect of the website as indication that the "unsolicited" title for these posts is justified.</p>
-<h2>Step 1: Search and replace within an .html doc</h2>
-<p>The first step was a function that read in a file and replaced a bit of text. Undoubtedly the fastest way to do this would have been to read in the file as a string and search and replace therein. However, given that I might have to do more such post-pelican tweaking of this website, I figured it was a good opportunity to learn a bit about python parsing of .html.</p>
-<p>I downloaded and installed BeautifulSoup to parse the doc. The basic format is to "soupify" the doc, search for the relevant text, and then replace that text with the lowercase version.</p>
-<p>When you run the <code>soup.find_all(text = capitalized_text)</code> command, the result is actually a list of NavigateableString objects. In order to replace the relevant text, first you have to get the parent, and then use <code>replace_with</code> to replace the relevant string in place. For some reason, <code>match.replace_with('new_string')</code> doesn't work.</p>
-<p>.. code-block:: python</p>
-<div class="codehilite"><pre><span class="n">def</span> <span class="n">uncapitalize_text</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">capitalized_text</span><span class="p">)</span><span class="o">:</span>
-    <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">open</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="sc">&#39;r&#39;</span><span class="p">))</span>
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+     <ul class="nav navbar-nav">
+      <li>
+       <a href="../pages/about.html">
+        about
+       </a>
+      </li>
+      <li>
+       <a href="../pages/talks.html">
+        talks
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tools.html">
+        tools
+       </a>
+      </li>
+      <li class="active">
+       <a href="../category/unsolicited.html">
+        unsolicited
+       </a>
+      </li>
+     </ul>
+     <ul class="nav navbar-nav navbar-right">
+      <li>
+       <a href="../archives.html">
+        <i class="fa fa-th-list">
+        </i>
+        <span class="icon-label">
+         Archives
+        </span>
+       </a>
+      </li>
+     </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+   </div>
+  </div>
+  <!-- /.navbar -->
+  <div class="container">
+   <div class="row">
+    <div class="col-sm-9">
+     <section id="content">
+      <article>
+       <header class="page-header">
+        <h1>
+         <a href="../uncapitalize.html" rel="bookmark" title="Permalink to Uncapitalize">
+          Uncapitalize
+         </a>
+        </h1>
+       </header>
+       <div class="entry-content">
+        <div class="panel">
+         <div class="panel-body">
+          <footer class="post-info">
+           <span class="label label-default">
+            Date
+           </span>
+           <span class="published">
+            <i class="fa fa-calendar">
+            </i>
+            <time datetime="2014-02-23T00:00:00">
+             Sun 23 February 2014
+            </time>
+           </span>
+           <span class="label label-default">
+            Tags
+           </span>
+           <a href="../tag/python.html">
+            python
+           </a>
+           /
+           <a href="../tag/self-reference.html">
+            self-reference
+           </a>
+          </footer>
+          <!-- /.post-info -->
+         </div>
+        </div>
+        <p>
+         I forced myself to learn a little bit about BeautifulSoup tonight. My goal was to change a small aspect of this website: the fact that I could specify the capitalization of pages in the title ("About" versus "about"), but I could not specify the capitalization of the category---in particular, "Unsolicited" turned to "unsolicited". I take the amount of time spent on this trivial aspect of the website as indication that the "unsolicited" title for these posts is justified.
+        </p>
+        <h2>
+         Step 1: Search and replace within an .html doc
+        </h2>
+        <p>
+         The first step was a function that read in a file and replaced a bit of text. Undoubtedly the fastest way to do this would have been to read in the file as a string and search and replace therein. However, given that I might have to do more such post-pelican tweaking of this website, I figured it was a good opportunity to learn a bit about python parsing of .html.
+        </p>
+        <p>
+         I downloaded and installed BeautifulSoup to parse the doc. The basic format is to "soupify" the doc, search for the relevant text, and then replace that text with the lowercase version.
+        </p>
+        <p>
+         When you run the
+         <code>
+          soup.find_all(text = capitalized_text)
+         </code>
+         command, the result is actually a list of NavigateableString objects. In order to replace the relevant text, first you have to get the parent, and then use
+         <code>
+          replace_with
+         </code>
+         to replace the relevant string in place. For some reason,
+         <code>
+          match.replace_with('new_string')
+         </code>
+         doesn't work.
+        </p>
+        <p>
+         .. code-block:: python
+        </p>
+        <div class="codehilite">
+         <pre><span class="n">def</span> <span class="n">uncapitalize_text</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">capitalized_text</span><span class="p">)</span><span class="o">:</span>
+    <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">open</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="sc">'r'</span><span class="p">))</span>
     <span class="n">all_matches</span> <span class="o">=</span> <span class="n">soup</span><span class="p">.</span><span class="n">find_all</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="n">capitalized_text</span><span class="p">)</span>
 
     <span class="k">for</span> <span class="n">match</span> <span class="n">in</span> <span class="n">all_matches</span><span class="o">:</span>
         <span class="n">parent</span> <span class="o">=</span> <span class="n">match</span><span class="p">.</span><span class="n">findParent</span><span class="p">()</span>
         <span class="n">parent</span><span class="p">.</span><span class="n">string</span><span class="p">.</span><span class="n">replace_with</span><span class="p">(</span><span class="n">parent</span><span class="p">.</span><span class="n">string</span><span class="p">.</span><span class="n">lower</span><span class="p">())</span>
 
-    <span class="n">with</span> <span class="n">open</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="sc">&#39;w&#39;</span><span class="p">)</span> <span class="n">as</span> <span class="n">output</span><span class="o">:</span>
+    <span class="n">with</span> <span class="n">open</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="sc">'w'</span><span class="p">)</span> <span class="n">as</span> <span class="n">output</span><span class="o">:</span>
         <span class="n">output</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">soup</span><span class="p">.</span><span class="n">prettify</span><span class="p">(</span><span class="n">soup</span><span class="p">.</span><span class="n">original_encoding</span><span class="p">))</span>
-</pre></div>
-
-
-<h2>Step 2: Find all .html files</h2>
-<p>The second step was to generate a list of .html files with relative paths to put through the <code>uncapitalize_text</code> above. Since pelican output has multiple levels of directories, I needed to walk the directory. It was a good chance to learn the <code>os.walk()</code> iterator.</p>
-<p>.. code-block:: python</p>
-<div class="codehilite"><pre><span class="n">def</span> <span class="n">remove_ignored</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">ignored</span><span class="p">)</span><span class="o">:</span>
+</pre>
+        </div>
+        <h2>
+         Step 2: Find all .html files
+        </h2>
+        <p>
+         The second step was to generate a list of .html files with relative paths to put through the
+         <code>
+          uncapitalize_text
+         </code>
+         above. Since pelican output has multiple levels of directories, I needed to walk the directory. It was a good chance to learn the
+         <code>
+          os.walk()
+         </code>
+         iterator.
+        </p>
+        <p>
+         .. code-block:: python
+        </p>
+        <div class="codehilite">
+         <pre><span class="n">def</span> <span class="n">remove_ignored</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">ignored</span><span class="p">)</span><span class="o">:</span>
     <span class="n">_</span> <span class="o">=</span> <span class="p">[</span><span class="n">names</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="n">in</span> <span class="n">ignored</span> <span class="k">if</span> <span class="n">i</span> <span class="n">in</span> <span class="n">names</span><span class="p">]</span>
     <span class="k">return</span> <span class="n">names</span>
 
@@ -134,111 +193,166 @@ pedmiston.org            </a>
     <span class="k">for</span> <span class="n">dirpath</span><span class="p">,</span> <span class="n">dirnames</span><span class="p">,</span> <span class="n">fnames</span> <span class="n">in</span> <span class="n">os</span><span class="p">.</span><span class="n">walk</span><span class="p">(</span><span class="n">output</span><span class="p">)</span><span class="o">:</span>
         <span class="n">dirnames</span> <span class="o">=</span> <span class="n">remove_ignored</span><span class="p">(</span><span class="n">dirnames</span><span class="p">,</span> <span class="n">ignore</span><span class="p">)</span>
         <span class="n">new_files</span> <span class="o">=</span> <span class="p">[</span><span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">dirpath</span><span class="p">,</span> <span class="n">fname</span><span class="p">)</span> <span class="k">for</span> <span class="n">fname</span> <span class="n">in</span> <span class="n">fnames</span> \
-                        <span class="k">if</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">fname</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="err">&#39;</span><span class="p">.</span><span class="n">html</span><span class="err">&#39;</span><span class="p">]</span>
+                        <span class="k">if</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">fname</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="err">'</span><span class="p">.</span><span class="n">html</span><span class="err">'</span><span class="p">]</span>
         <span class="n">all_html</span><span class="p">.</span><span class="n">extend</span><span class="p">(</span><span class="n">new_files</span><span class="p">)</span>
 
     <span class="k">return</span> <span class="n">all_html</span>
-</pre></div>
-
-
-<h2>Unsolicited</h2>
-<p>"Accomplishing" this trivial task introduced me to BeautifulSoup and os.walk, two very useful tools for using pelican-generated websites. Putting it all together, I can add these parsing functions to be called after <code>make html</code> to assure that these changes get made as the site develops.</p>
-            </div>
-            <!-- /.entry-content -->
-        </article>
-    </section>
-
+</pre>
         </div>
-        <div class="col-sm-3 well well-sm" id="sidebar">
-
-<aside>
-    <section>
-        <ul class="list-group list-group-flush">
-                <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
-                  <ul class="list-group" id="social">
-                    <li class="list-group-item"><a href="https://github.com/pedmiston"><i
-                            class="fa fa-github-square fa-lg"></i> github
-                    </a></li>
-                    <li class="list-group-item"><a href="http://osf.io/dsu3k"><i
-                            class="fa fa-openscienceframework-square fa-lg"></i> openscienceframework
-                    </a></li>
-                    <li class="list-group-item"><a href="http://sapir.psych.wisc.edu"><i
-                            class="fa fa-lupyanlab-square fa-lg"></i> lupyanlab
-                    </a></li>
-                  </ul>
-                </li>
-
-
-
-                <li class="list-group-item"><a href="http://pedmiston.org/"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
-                    <ul class="list-group " id="tags">
-                        <li class="list-group-item tag-4">
-                            <a href="http://pedmiston.org/tag/ideas.html">
-                                ideas
-                            </a>
-                        </li>
-                        <li class="list-group-item tag-4">
-                            <a href="http://pedmiston.org/tag/evolution.html">
-                                evolution
-                            </a>
-                        </li>
-                        <li class="list-group-item tag-4">
-                            <a href="http://pedmiston.org/tag/edge.html">
-                                edge
-                            </a>
-                        </li>
-                        <li class="list-group-item tag-4">
-                            <a href="http://pedmiston.org/tag/openscience.html">
-                                openscience
-                            </a>
-                        </li>
-                        <li class="list-group-item tag-4">
-                            <a href="http://pedmiston.org/tag/preregristration.html">
-                                preregristration
-                            </a>
-                        </li>
-                    </ul>
-                </li>    
-    <li class="list-group-item"><h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
-      <ul class="list-group" id="links">
-        <li class="list-group-item">
-            <a href="http://pedmiston.org/experiment-resources/" target="_blank">
-                experiment-resources
-            </a>
-        </li>
-        <li class="list-group-item">
-            <a href="http://pedmiston.org/turkgatemanager/" target="_blank">
-                turkgatemanager
-            </a>
-        </li>
-      </ul>
-    </li>
-
-        </ul>
-    </section>
-
-</aside>        </div>
+        <h2>
+         unsolicited
+        </h2>
+        <p>
+         "Accomplishing" this trivial task introduced me to BeautifulSoup and os.walk, two very useful tools for using pelican-generated websites. Putting it all together, I can add these parsing functions to be called after
+         <code>
+          make html
+         </code>
+         to assure that these changes get made as the site develops.
+        </p>
+       </div>
+       <!-- /.entry-content -->
+      </article>
+     </section>
     </div>
-</div>
-<footer>
-   <div class="container">
-      <hr>
-      <div class="row">
-         <div class="col-xs-10">&copy; 2014 Pierce Edmiston
-            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
-            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
-            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
-         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
-      </div>
+    <div class="col-sm-3 well well-sm" id="sidebar">
+     <aside>
+      <section>
+       <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+         <h4>
+          <i class="fa fa-home fa-lg">
+          </i>
+          <span class="icon-label">
+           Social
+          </span>
+         </h4>
+         <ul class="list-group" id="social">
+          <li class="list-group-item">
+           <a href="https://github.com/pedmiston">
+            <i class="fa fa-github-square fa-lg">
+            </i>
+            github
+           </a>
+          </li>
+          <li class="list-group-item">
+           <a href="http://osf.io/dsu3k">
+            <i class="fa fa-openscienceframework-square fa-lg">
+            </i>
+            openscienceframework
+           </a>
+          </li>
+          <li class="list-group-item">
+           <a href="http://sapir.psych.wisc.edu">
+            <i class="fa fa-lupyanlab-square fa-lg">
+            </i>
+            lupyanlab
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li class="list-group-item">
+         <a href="../">
+          <h4>
+           <i class="fa fa-tags fa-lg">
+           </i>
+           <span class="icon-label">
+            Tags
+           </span>
+          </h4>
+         </a>
+         <ul class="list-group " id="tags">
+          <li class="list-group-item tag-4">
+           <a href="../tag/edge.html">
+            edge
+           </a>
+          </li>
+          <li class="list-group-item tag-4">
+           <a href="../tag/openscience.html">
+            openscience
+           </a>
+          </li>
+          <li class="list-group-item tag-4">
+           <a href="../tag/evolution.html">
+            evolution
+           </a>
+          </li>
+          <li class="list-group-item tag-4">
+           <a href="../tag/preregristration.html">
+            preregristration
+           </a>
+          </li>
+          <li class="list-group-item tag-4">
+           <a href="../tag/ideas.html">
+            ideas
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li class="list-group-item">
+         <h4>
+          <i class="fa fa-external-link-square fa-lg">
+          </i>
+          <span class="icon-label">
+           Links
+          </span>
+         </h4>
+         <ul class="list-group" id="links">
+          <li class="list-group-item">
+           <a href="http://pedmiston.org/experiment-resources/" target="_blank">
+            experiment-resources
+           </a>
+          </li>
+          <li class="list-group-item">
+           <a href="http://pedmiston.org/turkgatemanager/" target="_blank">
+            turkgatemanager
+           </a>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </section>
+     </aside>
+    </div>
    </div>
-</footer>
-<script src="http://code.jquery.com/jquery.js"></script>
-
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="http://pedmiston.org/theme/js/bootstrap.min.js"></script>
-
-<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
-<script src="http://pedmiston.org/theme/js/respond.min.js"></script>
-
-</body>
+  </div>
+  <footer>
+   <div class="container">
+    <hr/>
+    <div class="row">
+     <div class="col-xs-10">
+      © 2014 Pierce Edmiston
+            · Powered by
+      <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">
+       pelican-bootstrap3
+      </a>
+      ,
+      <a href="http://docs.getpelican.com/" target="_blank">
+       Pelican
+      </a>
+      ,
+      <a href="http://getbootstrap.com" target="_blank">
+       Bootstrap
+      </a>
+     </div>
+     <div class="col-xs-2">
+      <p class="pull-right">
+       <i class="fa fa-arrow-up">
+       </i>
+       <a href="#">
+        Back to top
+       </a>
+      </p>
+     </div>
+    </div>
+   </div>
+  </footer>
+  <script src="http://code.jquery.com/jquery.js">
+  </script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="../theme/js/bootstrap.min.js">
+  </script>
+  <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+  <script src="../theme/js/respond.min.js">
+  </script>
+ </body>
 </html>
