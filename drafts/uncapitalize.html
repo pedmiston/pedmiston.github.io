@@ -102,7 +102,47 @@ pedmiston.org            </a>
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
-                <p>I forced myself to learn a little bit about BeautifulSoup tonight. My goal was to change a small aspect of this website: the fact that I could specify the capitalization of pages in the title ("About" versus "about"), but I could not specify the capitalization of the category---in particular, "Unsolicited" turned to </p>
+                <p>I forced myself to learn a little bit about BeautifulSoup tonight. My goal was to change a small aspect of this website: the fact that I could specify the capitalization of pages in the title ("About" versus "about"), but I could not specify the capitalization of the category---in particular, "Unsolicited" turned to "unsolicited". I take the amount of time spent on this trivial aspect of the website as indication that the "unsolicited" title for these posts is justified.</p>
+<h2>Step 1: Search and replace within an .html doc</h2>
+<p>The first step was a function that read in a file and replaced a bit of text. Undoubtedly the fastest way to do this would have been to read in the file as a string and search and replace therein. However, given that I might have to do more such post-pelican tweaking of this website, I figured it was a good opportunity to learn a bit about python parsing of .html.</p>
+<p>I downloaded and installed BeautifulSoup to parse the doc. The basic format is to "soupify" the doc, search for the relevant text, and then replace that text with the lowercase version.</p>
+<p>When you run the <code>soup.find_all(text = capitalized_text)</code> command, the result is actually a list of NavigateableString objects. In order to replace the relevant text, first you have to get the parent, and then use <code>replace_with</code> to replace the relevant string in place. For some reason, <code>match.replace_with('new_string')</code> doesn't work.</p>
+<p>.. code-block:: python</p>
+<div class="codehilite"><pre><span class="n">def</span> <span class="n">uncapitalize_text</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">capitalized_text</span><span class="p">)</span><span class="o">:</span>
+    <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">open</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="sc">&#39;r&#39;</span><span class="p">))</span>
+    <span class="n">all_matches</span> <span class="o">=</span> <span class="n">soup</span><span class="p">.</span><span class="n">find_all</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="n">capitalized_text</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">match</span> <span class="n">in</span> <span class="n">all_matches</span><span class="o">:</span>
+        <span class="n">parent</span> <span class="o">=</span> <span class="n">match</span><span class="p">.</span><span class="n">findParent</span><span class="p">()</span>
+        <span class="n">parent</span><span class="p">.</span><span class="n">string</span><span class="p">.</span><span class="n">replace_with</span><span class="p">(</span><span class="n">parent</span><span class="p">.</span><span class="n">string</span><span class="p">.</span><span class="n">lower</span><span class="p">())</span>
+
+    <span class="n">with</span> <span class="n">open</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="sc">&#39;w&#39;</span><span class="p">)</span> <span class="n">as</span> <span class="n">output</span><span class="o">:</span>
+        <span class="n">output</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">soup</span><span class="p">.</span><span class="n">prettify</span><span class="p">(</span><span class="n">soup</span><span class="p">.</span><span class="n">original_encoding</span><span class="p">))</span>
+</pre></div>
+
+
+<h2>Step 2: Find all .html files</h2>
+<p>The second step was to generate a list of .html files with relative paths to put through the <code>uncapitalize_text</code> above. Since pelican output has multiple levels of directories, I needed to walk the directory. It was a good chance to learn the <code>os.walk()</code> iterator.</p>
+<p>.. code-block:: python</p>
+<div class="codehilite"><pre><span class="n">def</span> <span class="n">remove_ignored</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">ignored</span><span class="p">)</span><span class="o">:</span>
+    <span class="n">_</span> <span class="o">=</span> <span class="p">[</span><span class="n">names</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="n">in</span> <span class="n">ignored</span> <span class="k">if</span> <span class="n">i</span> <span class="n">in</span> <span class="n">names</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">names</span>
+
+<span class="n">def</span> <span class="n">get_all_html</span><span class="p">(</span><span class="n">output</span><span class="p">,</span> <span class="n">ignore</span><span class="p">)</span><span class="o">:</span>
+    <span class="n">all_html</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">for</span> <span class="n">dirpath</span><span class="p">,</span> <span class="n">dirnames</span><span class="p">,</span> <span class="n">fnames</span> <span class="n">in</span> <span class="n">os</span><span class="p">.</span><span class="n">walk</span><span class="p">(</span><span class="n">output</span><span class="p">)</span><span class="o">:</span>
+        <span class="n">dirnames</span> <span class="o">=</span> <span class="n">remove_ignored</span><span class="p">(</span><span class="n">dirnames</span><span class="p">,</span> <span class="n">ignore</span><span class="p">)</span>
+        <span class="n">new_files</span> <span class="o">=</span> <span class="p">[</span><span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">dirpath</span><span class="p">,</span> <span class="n">fname</span><span class="p">)</span> <span class="k">for</span> <span class="n">fname</span> <span class="n">in</span> <span class="n">fnames</span> \
+                        <span class="k">if</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">fname</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="err">&#39;</span><span class="p">.</span><span class="n">html</span><span class="err">&#39;</span><span class="p">]</span>
+        <span class="n">all_html</span><span class="p">.</span><span class="n">extend</span><span class="p">(</span><span class="n">new_files</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">all_html</span>
+</pre></div>
+
+
+<h2>Unsolicited</h2>
+<p>"Accomplishing" this trivial task introduced me to BeautifulSoup and os.walk, two very useful tools for using pelican-generated websites. Putting it all together, I can add these parsing functions to be called after <code>make html</code> to assure that these changes get made as the site develops.</p>
             </div>
             <!-- /.entry-content -->
         </article>
@@ -138,8 +178,8 @@ pedmiston.org            </a>
                             </a>
                         </li>
                         <li class="list-group-item tag-4">
-                            <a href="http://pedmiston.org/tag/edge.html">
-                                edge
+                            <a href="http://pedmiston.org/tag/evolution.html">
+                                evolution
                             </a>
                         </li>
                         <li class="list-group-item tag-4">
@@ -153,8 +193,8 @@ pedmiston.org            </a>
                             </a>
                         </li>
                         <li class="list-group-item tag-4">
-                            <a href="http://pedmiston.org/tag/evolution.html">
-                                evolution
+                            <a href="http://pedmiston.org/tag/edge.html">
+                                edge
                             </a>
                         </li>
                     </ul>
