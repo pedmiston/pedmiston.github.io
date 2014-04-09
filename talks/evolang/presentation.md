@@ -64,7 +64,7 @@
     - _the metamodal brain_
 
 <aside class="notes">
-    Now it's important to note that we don't have to posit any universals about auditory waveforms to explain the difference between words and sounds. Verbal words and nonverbal sounds are learned very differently. Learning to associate a particular word form with, for example, all of the dogs in front of us and dogs back at home and dogs on TV is a fundamental part of learning a language. Environmental sounds, on the other hand, are causal auditory events. We learn what these sounds mean in the context of the relationship that it has with its source.
+    One way to distinguish these types of cues is to look at the differences in the acoustic forms. Sounds aren't discrete events and they can't be produced by humans. However it's important to note that we don't have to posit any universals about auditory waveforms to explain the difference between words and sounds. The meaning of words and sounds are both learned but in different ways. Learning to associate a particular word form with, for example, all of the dogs in front of us and dogs back at home and dogs on TV is a fundamental part of learning a language. Environmental sounds, on the other hand, are causal auditory events. We learn what these sounds mean in the context of the relationship that it has with its source.
 </aside>
 
 # Shape from sound
@@ -127,22 +127,10 @@
 
 ## 
 
-![](./images/sound-congruence-1.png)
-
-<aside class="notes">
-    We can test this by looking at how well sounds and labels cue individual members within the same category. Labels, as we know, are most effective for category typical items, but sounds, as motivated cues, are likely to be the most effective cues for the most likely source of the sound. So what we did was gathered a bunch of images for each category and had some that were better matches to the sound and some that were worse matches to the sound.
-</aside>
-
-##
-
-![](./images/sound-congruence-2.png)
-
-## 
-
 ![](./images/exp1-stimuli.png)
 
 <aside class="notes">
-    In the first experiment I'm going to tell you about we compared sounds that were perfectly matched with their source to sounds that were not but still in the same category of objects. A nice example is the category of guitars: we have acoustic guitars and electric guitars---they sound different but are easily recongizable as guitars. 
+     We can test this by looking at how well sounds and labels cue individual members within the same category. Labels, as we know, are most effective for category typical items, but sounds, as motivated cues, are likely to be the most effective cues for the most likely source of the sound. So what we did was gathered a bunch of images for each category and had some that were better matches to the sound and some that were worse matches to the sound. In the first experiment I'm going to tell you about we compared sounds that were perfectly matched with their source to sounds that were not but still in the same category of objects. A nice example is the category of guitars: we have acoustic guitars and electric guitars---they sound different but are easily recongizable as guitars. 
 </aside>
 
 ## 
@@ -166,7 +154,7 @@
 ## 
 
 <aside class="notes">
-   So what else could explain the difference? Well, we wondered if the fact that when we heard a dog bark we usually saw a dog nearby mattered; if the sounds were temporally precise.
+   So what else could explain the difference? Well one factor might be the timing. Since environmental sounds are causally related to their source, they are physically present whenever we hear the sound. If this information is encoded, then we can make the sound a better match to the image by playing the cue at the same time as seeing the picture.
 </aside>
 
 ##
@@ -181,6 +169,22 @@ Simultaneous
 
 ## 
 
+![](./images/sound-congruence-1.png)
+
+<aside class="notes">
+   Now in this experiment we also had within-category variation but we did it differently. Instead of discrete match or mismatch groups of images, we gathered a bunch of images for each category and had a group of participants rate how well the picture matched the sound.
+</aside>
+
+##
+
+![](./images/sound-congruence-2.png)
+
+<aside class="notes">
+    what this allows us to do is to statistically control for the effect of category typicality, which is a potential confound in these results.
+</aside>
+
+## 
+
 ![](./images/timing-1.png)
 
 <aside class="notes">
@@ -192,7 +196,7 @@ Simultaneous
 ![](./images/timing-2.png)
 
 <aside class="notes">
-    For the delayed trials labels are still faster than sounds at all levels of sound congruence.
+    For the delayed trials we see that as expected, labels are still faster than sounds at all levels of sound congruence even controlling for category typicality.
 </aside>
 
 ##
@@ -241,33 +245,15 @@ Simultaneous
 
 # Take home messages
 
-    +-------------------+----------------+
-    |      <bark>       |      "dog"     |
-    +===================+================+
-    | 1/8 +             | 8/8 +          |
-    | size of dog +     | dog at home +  |
-    | location of dog + | cartoon dogs + |
-    | "state" of dog    | imaginary dogs | 
-    +-------------------+----------------+
-    
-    My table in Markdown.
+![`"dog" versus <bark>`](./images/dog-park.png)
 
-1. verbal and nonverbal auditory cues are learned to mean different things due to different regularities our typical experiences
+1. learned based on different regularities in typical experience
 2. unmotivated are easier to associate with a psychological category of objects
     - motivated cues are too precise
 
 <aside class="notes">
     
 </aside>
-
-# Words as unmotivated cues
-
-## 
-
-![](./images/facets.png) 
-
-> "...key to early developments in crystallography, since they reflect the underlying symmetry of the crystal structure."
-
 
 # Snarls and snags
 
@@ -276,3 +262,41 @@ Simultaneous
     - we hear barks without dogs all the time
     - `<bark>` is not a motivated cue for a static 2D image
 
+# Challenging intuitions about language
+
+1. Ambiguity in language is bad
+2. Symbols are easy
+
+# Intuition 1: Ambiguity in language is bad
+
+## 
+
+<aside class="notes">
+    Natural idea that the ambiguity of language is a flaw.
+</aside>
+
+## Graphicspeak: the future of language
+
+![](./images/eon-cover.jpg)
+
+- holograms projected from neck device
+- symbols and icons with emotional "flair"
+
+<aside class="notes">
+    The book is called Eon, and in it the author Greg Bear lets members of today's society encounter the future of the human race in the depths of this asteroid shown on the cover. The relevant part of the story is that the ubiquitous language of the future is something called "graphicspeak". In graphicspeak people communicate using a mixture of both traditional, spoken language and what are called picts---3D holograms projected alongside the speakers face from a device they wear around their necks. These picts convey conventionalized symbols and iconic signs that are changed dynamically in order to reflect various aspects of the speakers internal state.
+</aside>
+
+## 
+
+- intuition: specificity is better for communication.
+- specificity is not better for categorization and abstraction.
+
+# Intuition 2: Symbols are easy
+
+- lot of aspects of motivated relationships in language and language learning
+- struggle to treat sounds as symbols
+
+# Words as unmotivated cues
+
+<h3>Pierce Edmiston</h3>
+<h3>EvoLang X</h3>

@@ -99,20 +99,16 @@ Imagine coming up to a dog park and hearing two things: the word dog from the pe
 </section>
 <section id="section-2" class="level2">
 <h2></h2>
-<table>
-<col style="width: 34%" /><col style="width: 30%" /><thead>
-<tr class="header">
-<th style="text-align: left;"><code>&lt;bark&gt;</code></th>
-<th style="text-align: left;">&quot;dog&quot;</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><p>1/8 + <br> size of dog + <br> location of dog + <br> &quot;state&quot; of dog</p></td>
-<td style="text-align: left;"><p>8/8 + <br> dog at home + <br> cartoon dogs + <br> imaginary dogs</p></td>
-</tr>
-</tbody>
-</table>
+<pre><code>+-------------------+----------------+
+|      &lt;bark&gt;       |      &quot;dog&quot;     |
++===================+================+
+| 1/8 +             | 8/8 +          |
+| size of dog +     | dog at home +  |
+| location of dog + | cartoon dogs + |
+| &quot;state&quot; of dog    | imaginary dogs | 
++-------------------+----------------+
+
+My table in Markdown.</code></pre>
 <aside class="notes">
     
 The word &quot;dog&quot; does not do this. The word &quot;dog&quot; identifies each dog and in sum identifies all of the dogs, plus it brings to mind our own dog back at home, cartoon dogs, even imaginary dogs. Now the experiments I'm going to tell you about directly compare these two types of cues along these dimensions, but before I get to the data, I'd like to take a moment to pause on where these differences in meaning come from.
@@ -136,7 +132,7 @@ The word &quot;dog&quot; does not do this. The word &quot;dog&quot; identifies e
 </ul>
 <aside class="notes">
     
-Now it's important to note that we don't have to posit any universals about auditory waveforms to explain the difference between words and sounds. Verbal words and nonverbal sounds are learned very differently. Learning to associate a particular word form with, for example, all of the dogs in front of us and dogs back at home and dogs on TV is a fundamental part of learning a language. Environmental sounds, on the other hand, are causal auditory events. We learn what these sounds mean in the context of the relationship that it has with its source.
+One way to distinguish these types of cues is to look at the differences in the acoustic forms. Sounds aren't discrete events and they can't be produced by humans. However it's important to note that we don't have to posit any universals about auditory waveforms to explain the difference between words and sounds. The meaning of words and sounds are both learned but in different ways. Learning to associate a particular word form with, for example, all of the dogs in front of us and dogs back at home and dogs on TV is a fundamental part of learning a language. Environmental sounds, on the other hand, are causal auditory events. We learn what these sounds mean in the context of the relationship that it has with its source.
 </aside>
 
 </section>
@@ -221,32 +217,15 @@ To understand this label advantage we can turn to the difference between words a
 <section id="section-7" class="level2">
 <h2></h2>
 <figure>
-<img src="./images/sound-congruence-1.png" />
+<img src="./images/exp1-stimuli.png" />
 </figure>
 <aside class="notes">
-    
-We can test this by looking at how well sounds and labels cue individual members within the same category. Labels, as we know, are most effective for category typical items, but sounds, as motivated cues, are likely to be the most effective cues for the most likely source of the sound. So what we did was gathered a bunch of images for each category and had some that were better matches to the sound and some that were worse matches to the sound.
+     
+We can test this by looking at how well sounds and labels cue individual members within the same category. Labels, as we know, are most effective for category typical items, but sounds, as motivated cues, are likely to be the most effective cues for the most likely source of the sound. So what we did was gathered a bunch of images for each category and had some that were better matches to the sound and some that were worse matches to the sound. In the first experiment I'm going to tell you about we compared sounds that were perfectly matched with their source to sounds that were not but still in the same category of objects. A nice example is the category of guitars: we have acoustic guitars and electric guitars---they sound different but are easily recongizable as guitars.
 </aside>
 
 </section>
 <section id="section-8" class="level2">
-<h2></h2>
-<figure>
-<img src="./images/sound-congruence-2.png" />
-</figure>
-</section>
-<section id="section-9" class="level2">
-<h2></h2>
-<figure>
-<img src="./images/exp1-stimuli.png" />
-</figure>
-<aside class="notes">
-    
-In the first experiment I'm going to tell you about we compared sounds that were perfectly matched with their source to sounds that were not but still in the same category of objects. A nice example is the category of guitars: we have acoustic guitars and electric guitars---they sound different but are easily recongizable as guitars.
-</aside>
-
-</section>
-<section id="section-10" class="level2">
 <h2></h2>
 <figure>
 <img src="./images/subordinate-1.png" />
@@ -257,7 +236,7 @@ So we had participants do another sound-picture verification task, and just to r
 </aside>
     
 </section>
-<section id="section-11" class="level2">
+<section id="section-9" class="level2">
 <h2></h2>
 <figure>
 <img src="./images/subordinate-2.png" />
@@ -271,15 +250,15 @@ Now what's surprising is that even these congruent sounds still don't make up th
 </section>
 <section id="are-sounds-temporally-precise" class="level1">
 <h1>Are sounds temporally precise?</h1>
-<section id="section-12" class="level2">
+<section id="section-10" class="level2">
 <h2></h2>
 <aside class="notes">
    
-So what else could explain the difference? Well, we wondered if the fact that when we heard a dog bark we usually saw a dog nearby mattered; if the sounds were temporally precise.
+So what else could explain the difference? Well one factor might be the timing. Since environmental sounds are causally related to their source, they are physically present whenever we hear the sound. If this information is encoded, then we can make the sound a better match to the image by playing the cue at the same time as seeing the picture.
 </aside>
 
 </section>
-<section id="section-13" class="level2">
+<section id="section-11" class="level2">
 <h2></h2>
 <p>Delayed</p>
 <figure>
@@ -289,6 +268,28 @@ So what else could explain the difference? Well, we wondered if the fact that wh
 <figure>
 <img src="./images/pic-verification-delay.png" />
 </figure>
+</section>
+<section id="section-12" class="level2">
+<h2></h2>
+<figure>
+<img src="./images/sound-congruence-1.png" />
+</figure>
+<aside class="notes">
+   
+Now in this experiment we also had within-category variation but we did it differently. Instead of discrete match or mismatch groups of images, we gathered a bunch of images for each category and had a group of participants rate how well the picture matched the sound.
+</aside>
+
+</section>
+<section id="section-13" class="level2">
+<h2></h2>
+<figure>
+<img src="./images/sound-congruence-2.png" />
+</figure>
+<aside class="notes">
+    
+what this allows us to do is to statistically control for the effect of category typicality, which is a potential confound in these results.
+</aside>
+
 </section>
 <section id="section-14" class="level2">
 <h2></h2>
@@ -308,7 +309,7 @@ Just to orient you, in this experiment we piloted the images to get a more conti
 </figure>
 <aside class="notes">
     
-For the delayed trials labels are still faster than sounds at all levels of sound congruence.
+For the delayed trials we see that as expected, labels are still faster than sounds at all levels of sound congruence even controlling for category typicality.
 </aside>
 
 </section>
@@ -376,18 +377,11 @@ Now what is interesting is if you take it one step further. So we can bin the fo
 </section>
 <section id="take-home-messages" class="level1">
 <h1>Take home messages</h1>
-<pre><code>+-------------------+----------------+
-|      &lt;bark&gt;       |      &quot;dog&quot;     |
-+===================+================+
-| 1/8 +             | 8/8 +          |
-| size of dog +     | dog at home +  |
-| location of dog + | cartoon dogs + |
-| &quot;state&quot; of dog    | imaginary dogs | 
-+-------------------+----------------+
-
-My table in Markdown.</code></pre>
+<figure>
+<img src="./images/dog-park.png" alt="&quot;dog&quot; versus &lt;bark&gt;" /><figcaption><code>&quot;dog&quot; versus &lt;bark&gt;</code></figcaption>
+</figure>
 <ol type="1">
-<li>verbal and nonverbal auditory cues are learned to mean different things due to different regularities our typical experiences</li>
+<li>learned based on different regularities in typical experience</li>
 <li>unmotivated are easier to associate with a psychological category of objects
 <ul>
 <li>motivated cues are too precise</li>
@@ -397,18 +391,6 @@ My table in Markdown.</code></pre>
     
 </aside>
 
-</section>
-<section id="words-as-unmotivated-cues" class="level1">
-<h1>Words as unmotivated cues</h1>
-<section id="section-22" class="level2">
-<h2></h2>
-<figure>
-<img src="./images/facets.png" />
-</figure>
-<blockquote>
-<p>&quot;...key to early developments in crystallography, since they reflect the underlying symmetry of the crystal structure.&quot;</p>
-</blockquote>
-</section>
 </section>
 <section id="snarls-and-snags" class="level1">
 <h1>Snarls and snags</h1>
@@ -420,6 +402,63 @@ My table in Markdown.</code></pre>
 <li><code>&lt;bark&gt;</code> is not a motivated cue for a static 2D image</li>
 </ul></li>
 </ul>
+</section>
+<section id="challenging-intuitions-about-language" class="level1">
+<h1>Challenging intuitions about language</h1>
+<ol type="1">
+<li>Ambiguity in language is bad</li>
+<li>Symbols are easy</li>
+</ol>
+</section>
+<section id="intuition-1-ambiguity-in-language-is-bad" class="level1">
+<h1>Intuition 1: Ambiguity in language is bad</h1>
+<section id="section-22" class="level2">
+<h2></h2>
+<aside class="notes">
+    
+Natural idea that the ambiguity of language is a flaw.
+</aside>
+
+</section>
+<section id="graphicspeak-the-future-of-language" class="level2">
+<h2>Graphicspeak: the future of language</h2>
+<figure>
+<img src="./images/eon-cover.jpg" />
+</figure>
+<ul>
+<li>holograms projected from neck device</li>
+<li>symbols and icons with emotional &quot;flair&quot;</li>
+</ul>
+<aside class="notes">
+    
+The book is called Eon, and in it the author Greg Bear lets members of today's society encounter the future of the human race in the depths of this asteroid shown on the cover. The relevant part of the story is that the ubiquitous language of the future is something called &quot;graphicspeak&quot;. In graphicspeak people communicate using a mixture of both traditional, spoken language and what are called picts---3D holograms projected alongside the speakers face from a device they wear around their necks. These picts convey conventionalized symbols and iconic signs that are changed dynamically in order to reflect various aspects of the speakers internal state.
+</aside>
+
+</section>
+<section id="section-23" class="level2">
+<h2></h2>
+<ul>
+<li>intuition: specificity is better for communication.</li>
+<li>specificity is not better for categorization and abstraction.</li>
+</ul>
+</section>
+</section>
+<section id="intuition-2-symbols-are-easy" class="level1">
+<h1>Intuition 2: Symbols are easy</h1>
+<ul>
+<li>lot of aspects of motivated relationships in language and language learning</li>
+<li>struggle to treat sounds as symbols</li>
+</ul>
+</section>
+<section id="words-as-unmotivated-cues" class="level1">
+<h1>Words as unmotivated cues</h1>
+<h3>
+Pierce Edmiston
+</h3>
+<h3>
+EvoLang X
+</h3>
+
 </section>
 </div>
  
