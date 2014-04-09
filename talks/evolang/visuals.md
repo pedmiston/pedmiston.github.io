@@ -1,0 +1,13 @@
+- metamodal brain gong picture
+- unmotivated cues with other category examples
+- sound picture verification task
+- lupyan thompson schill label advantage
+- sound congruence
+- subordinate-1 with example
+- subordinate-2 {transition}
+- timing-1
+- timing-2
+- timing-3
+- tys-task
+- tys-timecourse
+- tys-average
