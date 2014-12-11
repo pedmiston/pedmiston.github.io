@@ -1,28 +1,39 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="https://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#">
+<html lang="en">
  <head>
   <title>
    Uncapitalize - pedmiston.org
   </title>
   <!-- Using the latest rendering mode for IE -->
-  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <!-- Open Graph tags -->
-  <meta content="pedmiston.org" property="og:site_name"/>
-  <meta content="article" property="og:type"/>
-  <meta content="Uncapitalize" property="og:title"/>
-  <meta content="../uncapitalize.html" property="og:url"/>
-  <meta content="Simple script using BeautifulSoup to tweak various aspects of this website's pelican output." property="og:description"/>
-  <meta content="2014-02-23" property="article:published_time"/>
-  <meta content="unsolicited" property="article:section"/>
-  <meta content="python" property="article:tag"/>
-  <meta content="self-reference" property="article:tag"/>
-  <!-- Bootstrap -->
-  <link href="../theme/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-  <link href="../theme/css/font-awesome.min.css" rel="stylesheet"/>
-  <link href="../theme/css/pygments/native.css" rel="stylesheet"/>
-  <link href="../theme/css/style.css" rel="stylesheet" type="text/css"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+   <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+     <link href="http://pedmiston.org/drafts/uncapitalize.html" rel="canonical">
+      <meta content="Pierce Edmiston" name="author"/>
+      <meta content="python,self-reference" name="keywords"/>
+      <meta content="Simple script using BeautifulSoup to tweak various aspects of this website's pelican output." name="description"/>
+      <meta content="pedmiston.org" property="og:site_name"/>
+      <meta content="article" property="og:type"/>
+      <meta content="Uncapitalize" property="og:title"/>
+      <meta content="http://pedmiston.org/drafts/uncapitalize.html" property="og:url"/>
+      <meta content="Simple script using BeautifulSoup to tweak various aspects of this website's pelican output." property="og:description"/>
+      <meta content="2014-02-23" property="article:published_time"/>
+      <meta content="unsolicited" property="article:section"/>
+      <meta content="python" property="article:tag"/>
+      <meta content="self-reference" property="article:tag"/>
+      <meta content="Pierce Edmiston" property="article:author"/>
+      <!-- Bootstrap -->
+      <link href="http://pedmiston.org/theme/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+      <link href="http://pedmiston.org/theme/css/font-awesome.min.css" rel="stylesheet">
+       <link href="http://pedmiston.org/theme/css/pygments/native.css" rel="stylesheet">
+        <link href="http://pedmiston.org/theme/css/style.css" rel="stylesheet" type="text/css"/>
+        <link href="http://pedmiston.org/feeds/all.atom.xml" rel="alternate" title="pedmiston.org ATOM Feed" type="application/atom+xml"/>
+       </link>
+      </link>
+     </link>
+    </meta>
+   </meta>
+  </meta>
  </head>
  <body>
   <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -39,36 +50,31 @@
       <span class="icon-bar">
       </span>
      </button>
-     <a class="navbar-brand" href="../">
+     <a class="navbar-brand" href="http://pedmiston.org/">
       pedmiston.org
      </a>
     </div>
     <div class="collapse navbar-collapse navbar-ex1-collapse">
      <ul class="nav navbar-nav">
       <li>
-       <a href="../pages/about.html">
+       <a href="http://pedmiston.org/pages/about.html">
         about
        </a>
       </li>
       <li>
-       <a href="../pages/talks.html">
-        talks
-       </a>
-      </li>
-      <li>
-       <a href="../pages/tools.html">
+       <a href="http://pedmiston.org/pages/tools.html">
         tools
        </a>
       </li>
       <li class="active">
-       <a href="../category/unsolicited.html">
+       <a href="http://pedmiston.org/category/unsolicited.html">
         unsolicited
        </a>
       </li>
      </ul>
      <ul class="nav navbar-nav navbar-right">
       <li>
-       <a href="../archives.html">
+       <a href="http://pedmiston.org/archives.html">
         <i class="fa fa-th-list">
         </i>
         <span class="icon-label">
@@ -82,6 +88,8 @@
    </div>
   </div>
   <!-- /.navbar -->
+  <!-- Banner -->
+  <!-- End Banner -->
   <div class="container">
    <div class="row">
     <div class="col-sm-9">
@@ -89,7 +97,7 @@
       <article>
        <header class="page-header">
         <h1>
-         <a href="../uncapitalize.html" rel="bookmark" title="Permalink to Uncapitalize">
+         <a href="http://pedmiston.org/drafts/uncapitalize.html" rel="bookmark" title="Permalink to Uncapitalize">
           Uncapitalize
          </a>
         </h1>
@@ -104,18 +112,18 @@
            <span class="published">
             <i class="fa fa-calendar">
             </i>
-            <time datetime="2014-02-23T00:00:00">
+            <time datetime="2014-02-23T00:00:00+01:00">
              Sun 23 February 2014
             </time>
            </span>
            <span class="label label-default">
             Tags
            </span>
-           <a href="../tag/python.html">
+           <a href="http://pedmiston.org/tag/python.html">
             python
            </a>
            /
-           <a href="../tag/self-reference.html">
+           <a href="http://pedmiston.org/tag/self-reference.html">
             self-reference
            </a>
           </footer>
@@ -152,17 +160,17 @@
         <p>
          .. code-block:: python
         </p>
-        <div class="codehilite">
-         <pre><span class="n">def</span> <span class="n">uncapitalize_text</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">capitalized_text</span><span class="p">)</span><span class="o">:</span>
-    <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">open</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="sc">'r'</span><span class="p">))</span>
-    <span class="n">all_matches</span> <span class="o">=</span> <span class="n">soup</span><span class="p">.</span><span class="n">find_all</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="n">capitalized_text</span><span class="p">)</span>
+        <div class="highlight">
+         <pre>def uncapitalize_text(fname, capitalized_text):
+    soup = BeautifulSoup(open(fname, 'r'))
+    all_matches = soup.find_all(text=capitalized_text)
 
-    <span class="k">for</span> <span class="n">match</span> <span class="n">in</span> <span class="n">all_matches</span><span class="o">:</span>
-        <span class="n">parent</span> <span class="o">=</span> <span class="n">match</span><span class="p">.</span><span class="n">findParent</span><span class="p">()</span>
-        <span class="n">parent</span><span class="p">.</span><span class="n">string</span><span class="p">.</span><span class="n">replace_with</span><span class="p">(</span><span class="n">parent</span><span class="p">.</span><span class="n">string</span><span class="p">.</span><span class="n">lower</span><span class="p">())</span>
+    for match in all_matches:
+        parent = match.findParent()
+        parent.string.replace_with(parent.string.lower())
 
-    <span class="n">with</span> <span class="n">open</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="sc">'w'</span><span class="p">)</span> <span class="n">as</span> <span class="n">output</span><span class="o">:</span>
-        <span class="n">output</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">soup</span><span class="p">.</span><span class="n">prettify</span><span class="p">(</span><span class="n">soup</span><span class="p">.</span><span class="n">original_encoding</span><span class="p">))</span>
+    with open(fname, 'w') as output:
+        output.write(soup.prettify(soup.original_encoding))
 </pre>
         </div>
         <h2>
@@ -182,21 +190,21 @@
         <p>
          .. code-block:: python
         </p>
-        <div class="codehilite">
-         <pre><span class="n">def</span> <span class="n">remove_ignored</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">ignored</span><span class="p">)</span><span class="o">:</span>
-    <span class="n">_</span> <span class="o">=</span> <span class="p">[</span><span class="n">names</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="n">in</span> <span class="n">ignored</span> <span class="k">if</span> <span class="n">i</span> <span class="n">in</span> <span class="n">names</span><span class="p">]</span>
-    <span class="k">return</span> <span class="n">names</span>
+        <div class="highlight">
+         <pre>def remove_ignored(names, ignored):
+    _ = [names.remove(i) for i in ignored if i in names]
+    return names
 
-<span class="n">def</span> <span class="n">get_all_html</span><span class="p">(</span><span class="n">output</span><span class="p">,</span> <span class="n">ignore</span><span class="p">)</span><span class="o">:</span>
-    <span class="n">all_html</span> <span class="o">=</span> <span class="p">[]</span>
+def get_all_html(output, ignore):
+    all_html = []
 
-    <span class="k">for</span> <span class="n">dirpath</span><span class="p">,</span> <span class="n">dirnames</span><span class="p">,</span> <span class="n">fnames</span> <span class="n">in</span> <span class="n">os</span><span class="p">.</span><span class="n">walk</span><span class="p">(</span><span class="n">output</span><span class="p">)</span><span class="o">:</span>
-        <span class="n">dirnames</span> <span class="o">=</span> <span class="n">remove_ignored</span><span class="p">(</span><span class="n">dirnames</span><span class="p">,</span> <span class="n">ignore</span><span class="p">)</span>
-        <span class="n">new_files</span> <span class="o">=</span> <span class="p">[</span><span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">dirpath</span><span class="p">,</span> <span class="n">fname</span><span class="p">)</span> <span class="k">for</span> <span class="n">fname</span> <span class="n">in</span> <span class="n">fnames</span> \
-                        <span class="k">if</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">fname</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="err">'</span><span class="p">.</span><span class="n">html</span><span class="err">'</span><span class="p">]</span>
-        <span class="n">all_html</span><span class="p">.</span><span class="n">extend</span><span class="p">(</span><span class="n">new_files</span><span class="p">)</span>
+    for dirpath, dirnames, fnames in os.walk(output):
+        dirnames = remove_ignored(dirnames, ignore)
+        new_files = [os.path.join(dirpath, fname) for fname in fnames \
+                        if os.path.splitext(fname)[1] == '.html']
+        all_html.extend(new_files)
 
-    <span class="k">return</span> <span class="n">all_html</span>
+    return all_html
 </pre>
         </div>
         <h2>
@@ -214,9 +222,9 @@
       </article>
      </section>
     </div>
-    <div class="col-sm-3 well well-sm" id="sidebar">
+    <div class="col-sm-3" id="sidebar">
      <aside>
-      <section>
+      <section class="well well-sm">
        <ul class="list-group list-group-flush">
         <li class="list-group-item">
          <h4>
@@ -251,7 +259,7 @@
          </ul>
         </li>
         <li class="list-group-item">
-         <a href="../">
+         <a href="http://pedmiston.org/">
           <h4>
            <i class="fa fa-tags fa-lg">
            </i>
@@ -262,38 +270,38 @@
          </a>
          <ul class="list-group " id="tags">
           <li class="list-group-item tag-4">
-           <a href="../tag/statistics.html">
-            statistics
-           </a>
-          </li>
-          <li class="list-group-item tag-4">
-           <a href="../tag/preregristration.html">
-            preregristration
-           </a>
-          </li>
-          <li class="list-group-item tag-4">
-           <a href="../tag/edge.html">
-            edge
-           </a>
-          </li>
-          <li class="list-group-item tag-4">
-           <a href="../tag/quotes.html">
-            quotes
-           </a>
-          </li>
-          <li class="list-group-item tag-4">
-           <a href="../tag/openscience.html">
+           <a href="http://pedmiston.org/tag/openscience.html">
             openscience
            </a>
           </li>
           <li class="list-group-item tag-4">
-           <a href="../tag/evolution.html">
+           <a href="http://pedmiston.org/tag/preregristration.html">
+            preregristration
+           </a>
+          </li>
+          <li class="list-group-item tag-4">
+           <a href="http://pedmiston.org/tag/ideas.html">
+            ideas
+           </a>
+          </li>
+          <li class="list-group-item tag-4">
+           <a href="http://pedmiston.org/tag/statistics.html">
+            statistics
+           </a>
+          </li>
+          <li class="list-group-item tag-4">
+           <a href="http://pedmiston.org/tag/quotes.html">
+            quotes
+           </a>
+          </li>
+          <li class="list-group-item tag-4">
+           <a href="http://pedmiston.org/tag/evolution.html">
             evolution
            </a>
           </li>
           <li class="list-group-item tag-4">
-           <a href="../tag/ideas.html">
-            ideas
+           <a href="http://pedmiston.org/tag/edge.html">
+            edge
            </a>
           </li>
          </ul>
@@ -327,42 +335,43 @@
   </div>
   <footer>
    <div class="container">
-    <hr/>
-    <div class="row">
-     <div class="col-xs-10">
-      © 2014 Pierce Edmiston
+    <hr>
+     <div class="row">
+      <div class="col-xs-10">
+       © 2014 Pierce Edmiston
             · Powered by
-      <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">
-       pelican-bootstrap3
-      </a>
-      ,
-      <a href="http://docs.getpelican.com/" target="_blank">
-       Pelican
-      </a>
-      ,
-      <a href="http://getbootstrap.com" target="_blank">
-       Bootstrap
-      </a>
-     </div>
-     <div class="col-xs-2">
-      <p class="pull-right">
-       <i class="fa fa-arrow-up">
-       </i>
-       <a href="#">
-        Back to top
+       <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">
+        pelican-bootstrap3
        </a>
-      </p>
+       ,
+       <a href="http://docs.getpelican.com/" target="_blank">
+        Pelican
+       </a>
+       ,
+       <a href="http://getbootstrap.com" target="_blank">
+        Bootstrap
+       </a>
+      </div>
+      <div class="col-xs-2">
+       <p class="pull-right">
+        <i class="fa fa-arrow-up">
+        </i>
+        <a href="#">
+         Back to top
+        </a>
+       </p>
+      </div>
      </div>
-    </div>
+    </hr>
    </div>
   </footer>
-  <script src="http://code.jquery.com/jquery.js">
+  <script src="http://pedmiston.org/theme/js/jquery.min.js">
   </script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="../theme/js/bootstrap.min.js">
+  <script src="http://pedmiston.org/theme/js/bootstrap.min.js">
   </script>
   <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
-  <script src="../theme/js/respond.min.js">
+  <script src="http://pedmiston.org/theme/js/respond.min.js">
   </script>
  </body>
 </html>
